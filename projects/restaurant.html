@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Landing Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+    }
+
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero-content h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: #e74c3c;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .cta-button:hover {
+      background: #c0392b;
+    }
+
+    .menu {
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .menu h2 {
+      margin-bottom: 3rem;
+      font-size: 2.5rem;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .menu-item {
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+    }
+
+    .menu-item h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .menu-item p {
+      color: #666;
+    }
+
+    .contact {
+      padding: 5rem 2rem;
+      background: #f9f9f9;
+      text-align: center;
+    }
+
+    .contact h2 {
+      margin-bottom: 3rem;
+      font-size: 2.5rem;
+    }
+
+    .contact-info {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-info p {
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Смачний ресторан</h1>
+      <p>Найкращі страви та атмосфера</p>
+      <a href="#menu" class="cta-button">Переглянути меню</a>
+    </div>
+  </section>
+
+  <section id="menu" class="menu">
+    <h2>Наше меню</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img
+          src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+          alt="Страва 1">
+        <h3>Спеціальна страва</h3>
+        <p>Смачна страва з найкращих інгредієнтів</p>
+      </div>
+      <div class="menu-item">
+        <img
+          src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+          alt="Страва 2">
+        <h3>Десерт</h3>
+        <p>Солодкі десерти для завершення трапези</p>
+      </div>
+      <div class="menu-item">
+        <img
+          src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+          alt="Страва 3">
+        <h3>Салат</h3>
+        <p>Свіжі салати для здорового харчування</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Контакти</h2>
+    <div class="contact-info">
+      <p><i class="fas fa-map-marker-alt"></i> Адреса: вул. Прикладна, 1</p>
+      <p><i class="fas fa-phone"></i> Телефон: +380 97 625 30 53</p>
+      <p><i class="fas fa-envelope"></i> Email: vovatwitt@gmail.com</p>
+    </div>
+  </section>
+</body>
+
+</html>
