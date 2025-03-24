@@ -68,9 +68,37 @@ body {
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo span {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo i {
+  color: var(--secondary-color);
+  font-size: 2.2rem;
+  animation: pulse 4s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .nav-links {
@@ -120,11 +148,54 @@ body {
 
 .hero-content h1 {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .highlight {
   color: var(--secondary-color);
+  position: relative;
+  display: inline-block;
+  animation: glow 4s ease-in-out infinite alternate;
+  text-shadow: 0 0 10px rgba(9, 132, 227, 0.5);
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(9, 132, 227, 0.5),
+      0 0 20px rgba(9, 132, 227, 0.3),
+      0 0 30px rgba(9, 132, 227, 0.2);
+  }
+
+  to {
+    text-shadow: 0 0 20px rgba(9, 132, 227, 0.8),
+      0 0 30px rgba(9, 132, 227, 0.5),
+      0 0 40px rgba(9, 132, 227, 0.3);
+  }
+}
+
+.highlight::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+  animation: wave 4s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  50% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .hero-content p {
@@ -417,4 +488,26 @@ footer {
 
 .theme-toggle:hover {
   transform: scale(1.1);
+}
+
+.language-toggle {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.language-toggle:hover {
+  color: var(--secondary-color);
+}
+
+[data-lang="en"] .uk {
+  display: none;
+}
+
+[data-lang="uk"] .en {
+  display: none;
 }

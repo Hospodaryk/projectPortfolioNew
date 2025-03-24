@@ -12,35 +12,51 @@
 <body>
   <nav class="navbar">
     <div class="nav-content">
-      <div class="logo">Portfolio</div>
+      <div class="logo">
+        <i class="fas fa-code"></i>
+        <span>Portfolio</span>
+      </div>
       <ul class="nav-links">
-        <li><a href="#home">Головна</a></li>
-        <li><a href="#about">Про мене</a></li>
-        <li><a href="#projects">Проекти</a></li>
-        <li><a href="#contact">Контакти</a></li>
+        <li><a href="#home" class="uk">Головна</a><a href="#home" class="en">Home</a></li>
+        <li><a href="#about" class="uk">Про мене</a><a href="#about" class="en">About</a></li>
+        <li><a href="#projects" class="uk">Проєкти</a><a href="#projects" class="en">Projects</a></li>
+        <li><a href="#contact" class="uk">Контакти</a><a href="#contact" class="en">Contact</a></li>
+        <li>
+          <button class="language-toggle" aria-label="Змінити мову">
+            <i class="fas fa-globe"></i>
+          </button>
+        </li>
       </ul>
     </div>
   </nav>
 
   <section id="home" class="hero">
     <div class="hero-content">
-      <h1>Привіт, я <span class="highlight">Frontend Developer</span></h1>
-      <p>Створюю красиві, швидкі та функціональні веб-додатки, які забезпечують чудовий користувацький досвід. Працюю з
-        сучасними
-        технологіями та завжди прагну до ідеального поєднання дизайну й продуктивності.</p>
-      <a href="#contact" class="cta-button">Зв'язатися</a>
+      <h1><span class="uk">Привіт, я</span><span class="en">Hello, I'm</span> <span class="highlight">Frontend
+          Developer</span></h1>
+      <p class="uk">Створюю красиві, швидкі та функціональні веб-додатки, які забезпечують чудовий користувацький
+        досвід. Працюю з сучасними технологіями та завжди прагну до ідеального поєднання дизайну й продуктивності.</p>
+      <p class="en">Creating beautiful, fast, and functional web applications that provide an excellent user experience.
+        Working with modern technologies and always striving for the perfect combination of design and performance.</p>
+      <a href="#contact" class="cta-button uk">Зв'язатися</a>
+      <a href="#contact" class="cta-button en">Contact</a>
     </div>
   </section>
 
   <section id="about" class="about">
     <div class="container">
-      <h2>Про мене</h2>
+      <h2><span class="uk">Про мене</span><span class="en">About Me</span></h2>
       <div class="about-content">
         <div class="about-text">
-          <p>Створюю красиві, швидкі та функціональні веб-додатки, які забезпечують чудовий користувацький досвід.
-            Працюю з сучасними технологіями та завжди прагну до ідеального поєднання дизайну й продуктивності.</p>
+          <p class="uk">Розробляю веб-додатки, що поєднують візуальну привабливість і високу ефективність. Моє завдання
+            — створювати інтуїтивно зрозумілі та швидкі інтерфейси, які забезпечують відмінний користувацький досвід.
+            Підходжу до кожного проєкту з увагою до деталей, оптимізуючи продуктивність і прагнучи до бездоганного
+            результату.</p>
+          <p class="en">I develop web applications that combine visual appeal and high efficiency. My goal is to create
+            intuitive and fast interfaces that provide an excellent user experience. I approach each project with
+            attention to detail, optimizing performance and striving for flawless results.</p>
           <div class="skills">
-            <h3>Навички</h3>
+            <h3><span class="uk">Навички</span><span class="en">Skills</span></h3>
             <ul>
               <li>HTML</li>
               <li>CSS</li>
@@ -49,6 +65,7 @@
               <li>TypeScript</li>
               <li>React</li>
               <li>ReactJS</li>
+              <li>Next.js</li>
               <li>Bootstrap</li>
               <li>Git</li>
               <li>GitHub</li>
@@ -59,6 +76,7 @@
               <li>Tailwind</li>
               <li>Vite</li>
               <li>Yarn</li>
+              <li>Figma</li>
             </ul>
           </div>
         </div>
@@ -68,14 +86,16 @@
 
   <section id="projects" class="projects">
     <div class="container">
-      <h2>Проєкти для прикладу ⌲</h2>
+      <h2><span class="uk">Проєкти для прикладу</span><span class="en">Example Projects</span> ⌲</h2>
       <div class="projects-grid">
         <div class="project-card">
           <img
             src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             alt="Restaurant Landing">
-          <h3>Проєкт для ресторанного бізнесу</h3>
-          <p>Сучасний односторінковий сайт для ресторану з адаптивним дизайном та анімаціями</p>
+          <h3><span class="uk">Проєкт для ресторанного бізнесу</span><span class="en">Restaurant Business Project</span>
+          </h3>
+          <p class="uk">Сучасний односторінковий сайт для ресторану з адаптивним дизайном та анімаціями</p>
+          <p class="en">Modern single-page website for a restaurant with responsive design and animations</p>
           <div class="project-links">
             <a href="projects/restaurant.html" target="_blank"><i class="fas fa-external-link-alt"></i></a>
           </div>
@@ -84,8 +104,9 @@
           <img
             src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             alt="Fitness Landing">
-          <h3>Проєкт для фітнес клубу</h3>
-          <p>Односторінковий сайт для фітнес-клубу з секціями переваг та цінами</p>
+          <h3><span class="uk">Проєкт для фітнес клубу</span><span class="en">Fitness Club Project</span></h3>
+          <p class="uk">Односторінковий сайт для фітнес-клубу з секціями переваг та цінами</p>
+          <p class="en">Single-page website for a fitness club with benefits and pricing sections</p>
           <div class="project-links">
             <a href="projects/fitness.html" target="_blank"><i class="fas fa-external-link-alt"></i></a>
           </div>
@@ -94,8 +115,9 @@
           <img
             src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             alt="Travel Landing">
-          <h3>Проєкт для туризму</h3>
-          <p>Односторінковий сайт для туристичного агентства з галереєю напрямків</p>
+          <h3><span class="uk">Проєкт для туризму</span><span class="en">Travel Agency Project</span></h3>
+          <p class="uk">Односторінковий сайт для туристичного агентства з галереєю напрямків</p>
+          <p class="en">Single-page website for a travel agency with destination gallery</p>
           <div class="project-links">
             <a href="projects/travel.html" target="_blank"><i class="fas fa-external-link-alt"></i></a>
           </div>
@@ -104,8 +126,9 @@
           <img
             src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             alt="Car Sales">
-          <h3>Проєкт для продажу авто</h3>
-          <p>Односторінковий сайт для автосалону з каталогом преміум автомобілів</p>
+          <h3><span class="uk">Проєкт для продажу авто</span><span class="en">Car Sales Project</span></h3>
+          <p class="uk">Односторінковий сайт для автосалону з каталогом преміум автомобілів</p>
+          <p class="en">Single-page website for a car dealership with premium car catalog</p>
           <div class="project-links">
             <a href="projects/cars.html" target="_blank"><i class="fas fa-external-link-alt"></i></a>
           </div>
@@ -114,8 +137,9 @@
           <img
             src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             alt="Photography Portfolio">
-          <h3>Проєкт для фотографів</h3>
-          <p>Односторінковий сайт для фотографів з галереєю та послугами</p>
+          <h3><span class="uk">Проєкт для фотографів</span><span class="en">Photography Portfolio Project</span></h3>
+          <p class="uk">Односторінковий сайт для фотографів з галереєю та послугами</p>
+          <p class="en">Single-page website for photographers with gallery and services</p>
           <div class="project-links">
             <a href="projects/photography.html" target="_blank"><i class="fas fa-external-link-alt"></i></a>
           </div>
@@ -124,8 +148,9 @@
           <img
             src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             alt="E-commerce">
-          <h3>Проєкт для товарного бізнесу</h3>
-          <p>Односторінковий сайт для інтернет-магазину з каталогом товарів</p>
+          <h3><span class="uk">Проєкт для товарного бізнесу</span><span class="en">E-commerce Project</span></h3>
+          <p class="uk">Односторінковий сайт для інтернет-магазину з каталогом товарів</p>
+          <p class="en">Single-page website for an online store with product catalog</p>
           <div class="project-links">
             <a href="projects/shop.html" target="_blank"><i class="fas fa-external-link-alt"></i></a>
           </div>
@@ -136,7 +161,7 @@
 
   <section id="contact" class="contact">
     <div class="container">
-      <h2>Контакти</h2>
+      <h2><span class="uk">Контакти</span><span class="en">Contact</span></h2>
       <div class="contact-content">
         <div class="contact-info">
           <div class="contact-item">
@@ -149,10 +174,14 @@
           </div>
         </div>
         <form id="contact-form">
-          <input type="text" placeholder="Ваше ім'я" required>
-          <input type="email" placeholder="Ваш email" required>
-          <textarea placeholder="Ваше повідомлення" required></textarea>
-          <button type="submit" class="cta-button">Надіслати</button>
+          <input type="text" placeholder="Ваше ім'я" class="uk" required>
+          <input type="text" placeholder="Your name" class="en" required>
+          <input type="email" placeholder="Ваш email" class="uk" required>
+          <input type="email" placeholder="Your email" class="en" required>
+          <textarea placeholder="Ваше повідомлення" class="uk" required></textarea>
+          <textarea placeholder="Your message" class="en" required></textarea>
+          <button type="submit" class="cta-button uk">Надіслати</button>
+          <button type="submit" class="cta-button en">Send</button>
         </form>
         <div class="social-links">
           <a href="#" target="_blank"><i class="fab fa-github"></i></a>
@@ -165,7 +194,9 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2024 Frontend Developer Portfolio. Всі права захищено.</p>
+      <p><span class="uk">&copy; 2025 Frontend Developer Portfolio. Всі права захищено.</span>
+        <span class="en">&copy; 2024 Frontend Developer Portfolio. All rights reserved.</span>
+      </p>
     </div>
   </footer>
 

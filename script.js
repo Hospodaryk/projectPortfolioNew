@@ -126,4 +126,24 @@ window.addEventListener('scroll', () => {
       link.classList.add('active');
     }
   });
+});
+
+// Language toggle functionality
+const languageToggle = document.querySelector('.language-toggle');
+const html = document.documentElement;
+
+// Check for saved language preference
+const savedLang = localStorage.getItem('language') || 'uk';
+html.setAttribute('data-lang', savedLang);
+
+languageToggle.addEventListener('click', () => {
+  const currentLang = html.getAttribute('data-lang');
+  const newLang = currentLang === 'uk' ? 'en' : 'uk';
+
+  html.setAttribute('data-lang', newLang);
+  localStorage.setItem('language', newLang);
+
+  // Update aria-label
+  languageToggle.setAttribute('aria-label', newLang === 'uk' ? 'Змінити мову' : 'Change language');
+  themeToggle.setAttribute('aria-label', newLang === 'uk' ? 'Перемкнути тему' : 'Toggle theme');
 }); 
