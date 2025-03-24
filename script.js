@@ -151,27 +151,32 @@ languageToggle.addEventListener('click', () => {
 // Мобільне меню
 const menuToggle = document.querySelector('.menu-toggle');
 const mobileNavLinks = document.querySelector('.nav-links');
+const menuOverlay = document.querySelector('.menu-overlay');
 
-menuToggle.addEventListener('click', () => {
+function toggleMenu() {
   mobileNavLinks.classList.toggle('active');
-  menuToggle.querySelector('i').classList.toggle('fa-bars');
-  menuToggle.querySelector('i').classList.toggle('fa-times');
-});
+  menuOverlay.classList.toggle('active');
+  menuToggle.classList.toggle('active');
+  menuToggle.setAttribute('aria-label',
+    mobileNavLinks.classList.contains('active') ? 'Закрити меню' : 'Відкрити меню'
+  );
+}
+
+menuToggle.addEventListener('click', toggleMenu);
+menuOverlay.addEventListener('click', toggleMenu);
 
 // Закриваємо меню при кліку на посилання
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
-    mobileNavLinks.classList.remove('active');
-    menuToggle.querySelector('i').classList.add('fa-bars');
-    menuToggle.querySelector('i').classList.remove('fa-times');
+    if (mobileNavLinks.classList.contains('active')) {
+      toggleMenu();
+    }
   });
 });
 
-// Закриваємо меню при кліку поза меню
-document.addEventListener('click', (e) => {
-  if (!mobileNavLinks.contains(e.target) && !menuToggle.contains(e.target)) {
-    mobileNavLinks.classList.remove('active');
-    menuToggle.querySelector('i').classList.add('fa-bars');
-    menuToggle.querySelector('i').classList.remove('fa-times');
+// Закриваємо меню при зміні розміру вікна
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768 && mobileNavLinks.classList.contains('active')) {
+    toggleMenu();
   }
 }); 
