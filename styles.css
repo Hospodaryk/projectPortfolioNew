@@ -511,3 +511,234 @@ footer {
 [data-lang="uk"] .en {
   display: none;
 }
+
+/* Медіа-запити для адаптивності */
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .project-card {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .about-text {
+    width: 100%;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .skills ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-content .cta-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .skills ul {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-form button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .social-links a {
+    font-size: 1.2rem;
+  }
+
+  .theme-toggle,
+  .language-toggle {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: var(--bg-color);
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+/* Оптимізація для планшетів */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .about-content {
+    gap: 2rem;
+  }
+
+  .about-image {
+    width: 45%;
+  }
+
+  .about-text {
+    width: 55%;
+  }
+
+  .project-card {
+    width: calc(50% - 1rem);
+  }
+
+  .skills ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contact-form {
+    width: 90%;
+  }
+}
+
+/* Оптимізація для великих планшетів */
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .hero-content h1 {
+    font-size: 3.8rem;
+  }
+
+  .project-card {
+    width: calc(33.333% - 1.5rem);
+  }
+}
+
+/* Оптимізація для високих екранів */
+@media screen and (min-height: 1000px) {
+  .hero {
+    height: 100vh;
+  }
+
+  .hero-content {
+    padding-top: 15vh;
+  }
+}
+
+/* Оптимізація для низьких екранів */
+@media screen and (max-height: 700px) {
+  .hero {
+    height: auto;
+    min-height: 100vh;
+    padding: 4rem 0;
+  }
+
+  .hero-content {
+    padding-top: 2rem;
+  }
+}
+
+/* Оптимізація для пристроїв з високою щільністю пікселів */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+  .hero {
+    background-image: url('../images/hero-bg.jpg');
+  }
+}
+
+/* Оптимізація для пристроїв з підтримкою hover */
+@media (hover: hover) {
+
+  .nav-links a:hover,
+  .social-links a:hover,
+  .project-card:hover {
+    transform: translateY(-3px);
+  }
+}
+
+/* Оптимізація для пристроїв без підтримки hover */
+@media (hover: none) {
+
+  .nav-links a:active,
+  .social-links a:active,
+  .project-card:active {
+    transform: translateY(-3px);
+  }
+}

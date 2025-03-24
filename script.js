@@ -146,4 +146,32 @@ languageToggle.addEventListener('click', () => {
   // Update aria-label
   languageToggle.setAttribute('aria-label', newLang === 'uk' ? 'Змінити мову' : 'Change language');
   themeToggle.setAttribute('aria-label', newLang === 'uk' ? 'Перемкнути тему' : 'Toggle theme');
+});
+
+// Мобільне меню
+const menuToggle = document.querySelector('.menu-toggle');
+const mobileNavLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+  mobileNavLinks.classList.toggle('active');
+  menuToggle.querySelector('i').classList.toggle('fa-bars');
+  menuToggle.querySelector('i').classList.toggle('fa-times');
+});
+
+// Закриваємо меню при кліку на посилання
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileNavLinks.classList.remove('active');
+    menuToggle.querySelector('i').classList.add('fa-bars');
+    menuToggle.querySelector('i').classList.remove('fa-times');
+  });
+});
+
+// Закриваємо меню при кліку поза меню
+document.addEventListener('click', (e) => {
+  if (!mobileNavLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+    mobileNavLinks.classList.remove('active');
+    menuToggle.querySelector('i').classList.add('fa-bars');
+    menuToggle.querySelector('i').classList.remove('fa-times');
+  }
 }); 
