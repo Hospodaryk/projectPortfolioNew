@@ -80,29 +80,30 @@ projectCards.forEach(card => {
   observer.observe(card);
 });
 
-// Theme toggle functionality
-const themeToggle = document.querySelector('.theme-toggle');
-const icon = themeToggle.querySelector('i');
+// === Theme toggle functionality (оновлено для .dark-mode-btn) ===
+const darkModeBtn = document.querySelector('.dark-mode-btn');
+const sunIcon = darkModeBtn.querySelectorAll('.dark-mode-btn__icon')[0];
+const moonIcon = darkModeBtn.querySelectorAll('.dark-mode-btn__icon')[1];
 
-// Check for saved theme preference
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
-  document.documentElement.setAttribute('data-theme', savedTheme);
-  updateIcon(savedTheme);
+function setTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+  if (theme === 'dark') {
+    sunIcon.classList.add('active');
+    moonIcon.classList.remove('active');
+  } else {
+    sunIcon.classList.remove('active');
+    moonIcon.classList.add('active');
+  }
 }
 
-themeToggle.addEventListener('click', () => {
+const savedTheme = localStorage.getItem('theme') || 'light';
+setTheme(savedTheme);
+
+darkModeBtn.addEventListener('click', () => {
   const currentTheme = document.documentElement.getAttribute('data-theme');
-  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-  document.documentElement.setAttribute('data-theme', newTheme);
-  localStorage.setItem('theme', newTheme);
-  updateIcon(newTheme);
+  setTheme(currentTheme === 'dark' ? 'light' : 'dark');
 });
-
-function updateIcon(theme) {
-  icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-}
 
 // Scroll spy for navigation
 const sections = document.querySelectorAll('section');
@@ -146,7 +147,7 @@ languageToggle.addEventListener('click', () => {
 
   // Update aria-label
   languageToggle.setAttribute('aria-label', newLang === 'uk' ? 'Змінити мову' : 'Change language');
-  themeToggle.setAttribute('aria-label', newLang === 'uk' ? 'Перемкнути тему' : 'Toggle theme');
+  darkModeBtn.setAttribute('aria-label', newLang === 'uk' ? 'Перемкнути тему' : 'Toggle theme');
 });
 
 // Мобільне меню
