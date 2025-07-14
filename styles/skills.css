@@ -1,0 +1,121 @@
+/* Skills Section */
+
+#skills {
+  scroll-margin-top: 80px;
+  /* або ваша фактична висота навбару */
+}
+
+.skills-section {
+  background: var(--background-color);
+  padding: 3rem 0;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.2rem;
+  justify-items: center;
+  align-items: stretch;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto 0 auto;
+  box-sizing: border-box;
+}
+
+.skill-icon {
+  font-size: 2rem;
+  width: 2em;
+  height: 2em;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary-color, #0984e3);
+  margin-bottom: 0.3rem;
+}
+
+.skills h3 {
+  margin: 2.7rem 0 1.7rem;
+  font-size: 2.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.skills-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  font-size: 2.5rem;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto 1.5rem auto;
+}
+
+.skills-desc {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.skills li {
+  background: var(--card-background);
+  padding: 1.1rem 0.5rem 0.7rem 0.5rem;
+  border-radius: 18px;
+  font-size: 1rem;
+  color: var(--text-color);
+  box-shadow: 0 2px 8px var(--shadow-color, rgba(0, 0, 0, 0.07));
+  transition: transform 0.22s, box-shadow 0.22s;
+  text-align: center;
+  min-width: 110px;
+  max-width: 180px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills li:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 6px 18px var(--shadow-color, rgba(0, 0, 0, 0.13));
+  border-color: var(--secondary-color, #0984e3);
+}
+
+@media (max-width: 600px) {
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.7rem;
+  }
+
+  .skills li {
+    font-size: 0.92rem;
+    min-width: 90px;
+    max-width: 140px;
+    padding: 0.8rem 0.3rem 0.5rem 0.3rem;
+  }
+
+  .skill-icon {
+    font-size: 1.4rem;
+    width: 1.4em;
+    height: 1.4em;
+  }
+}

@@ -1,0 +1,39 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Light theme variables */
+  --primary-color: #2d3436;
+  --secondary-color: #0984e3;
+  --text-color: #2d3436;
+  --light-gray: #dfe6e9;
+  --white: #ffffff;
+  --background-color: #ffffff;
+  --card-background: #ffffff;
+  --section-background: #f8f9fa;
+  --input-background: #ffffff;
+  --input-border: #dfe6e9;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --primary-color: #ffffff;
+  --secondary-color: #74b9ff;
+  --text-color: #dfe6e9;
+  --light-gray: #636e72;
+  --white: #2d3436;
+  --background-color: #2d3436;
+  --card-background: #353b48;
+  --section-background: #2d3436;
+  --input-background: #353b48;
+  --input-border: #636e72;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,241 @@
+/* Footer */
+footer {
+  padding: 2rem 0;
+  background: linear-gradient(90deg, #274472 0%, #4f8cff 60%, #6ee7f7 100%);
+  background-size: 200% 200%;
+  animation: footerGradient 18s ease-in-out infinite;
+  color: var(--white);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+footer .container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@keyframes footerGradient {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+.footer-animals {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  left: 0;
+  bottom: 20px;
+  height: 40px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.animal {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  will-change: transform;
+}
+
+.animal-rabbit {
+  left: 0;
+  animation: rabbit-run 12s linear infinite;
+}
+
+.animal-fox {
+  left: 100%;
+  animation: fox-run 16s linear infinite reverse;
+}
+
+@keyframes rabbit-run {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+
+  10% {
+    transform: translateX(10vw) translateY(-2px);
+  }
+
+  20% {
+    transform: translateX(20vw) translateY(2px);
+  }
+
+  30% {
+    transform: translateX(30vw) translateY(-3px);
+  }
+
+  40% {
+    transform: translateX(40vw) translateY(1px);
+  }
+
+  50% {
+    transform: translateX(50vw) translateY(-2px);
+  }
+
+  60% {
+    transform: translateX(60vw) translateY(2px);
+  }
+
+  70% {
+    transform: translateX(70vw) translateY(-1px);
+  }
+
+  80% {
+    transform: translateX(80vw) translateY(2px);
+  }
+
+  90% {
+    transform: translateX(90vw) translateY(-2px);
+  }
+
+  100% {
+    transform: translateX(100vw) translateY(0);
+  }
+}
+
+@keyframes fox-run {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+
+  10% {
+    transform: translateX(-10vw) translateY(2px);
+  }
+
+  20% {
+    transform: translateX(-20vw) translateY(-2px);
+  }
+
+  30% {
+    transform: translateX(-30vw) translateY(3px);
+  }
+
+  40% {
+    transform: translateX(-40vw) translateY(-1px);
+  }
+
+  50% {
+    transform: translateX(-50vw) translateY(2px);
+  }
+
+  60% {
+    transform: translateX(-60vw) translateY(-2px);
+  }
+
+  70% {
+    transform: translateX(-70vw) translateY(1px);
+  }
+
+  80% {
+    transform: translateX(-80vw) translateY(-2px);
+  }
+
+  90% {
+    transform: translateX(-90vw) translateY(2px);
+  }
+
+  100% {
+    transform: translateX(-100vw) translateY(0);
+  }
+}
+
+.bird1 {
+  left: 0;
+  animation: bird1-fly 14s linear infinite;
+}
+
+.bird2 {
+  left: 100%;
+  animation: bird2-fly 18s linear infinite reverse;
+}
+
+.bird3 {
+  left: 10vw;
+  animation: bird3-fly 22s linear infinite;
+}
+
+@keyframes bird1-fly {
+  0% {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+
+  20% {
+    transform: translateX(20vw) translateY(-8px) scale(1.05);
+  }
+
+  40% {
+    transform: translateX(40vw) translateY(6px) scale(0.95);
+  }
+
+  60% {
+    transform: translateX(60vw) translateY(-10px) scale(1.1);
+  }
+
+  80% {
+    transform: translateX(80vw) translateY(4px) scale(1);
+  }
+
+  100% {
+    transform: translateX(100vw) translateY(0) scale(1);
+  }
+}
+
+@keyframes bird2-fly {
+  0% {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+
+  25% {
+    transform: translateX(-25vw) translateY(-10px) scale(1.08);
+  }
+
+  50% {
+    transform: translateX(-50vw) translateY(8px) scale(0.92);
+  }
+
+  75% {
+    transform: translateX(-75vw) translateY(-6px) scale(1.04);
+  }
+
+  100% {
+    transform: translateX(-100vw) translateY(0) scale(1);
+  }
+}
+
+@keyframes bird3-fly {
+  0% {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+
+  15% {
+    transform: translateX(15vw) translateY(-6px) scale(1.07);
+  }
+
+  30% {
+    transform: translateX(30vw) translateY(7px) scale(0.93);
+  }
+
+  60% {
+    transform: translateX(60vw) translateY(-12px) scale(1.12);
+  }
+
+  85% {
+    transform: translateX(85vw) translateY(5px) scale(1);
+  }
+
+  100% {
+    transform: translateX(100vw) translateY(0) scale(1);
+  }
+}

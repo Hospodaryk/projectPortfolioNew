@@ -1,0 +1,28 @@
+#particles-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  display: block;
+}
+
+@media (hover: hover) {
+
+  .nav-links a:hover,
+  .social-links a:hover,
+  .project-card:hover {
+    transform: translateY(-3px);
+  }
+}
+
+@media (hover: none) {
+
+  .nav-links a:active,
+  .social-links a:active,
+  .project-card:active {
+    transform: translateY(-3px);
+  }
+}
